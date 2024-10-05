@@ -53,7 +53,7 @@ testing = test_datagen.flow_from_directory('C:/Users/JYOTI/Downloads/DEEP_LEARNI
                                             color_mode='grayscale',
                                             class_mode='categorical') 
 
-model.fit_generator(
+history = model.fit(
         training,
         steps_per_epoch=600, 
         epochs=10,
