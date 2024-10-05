@@ -61,6 +61,7 @@ for j in range(classes):
         cv2.imshow('frame',frame)
 
         roi = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
+        _,roi = cv2.threshold(roi, 120,255, cv2.THRESH_BINARY)
         cv2.imshow('ROI', roi)
         cv2.resizeWindow('ROI', 300, 300) 
         cv2.waitKey(25)
@@ -125,6 +126,7 @@ for j in range(classes):
         cv2.imshow('frame',frame)
 
         roi = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
+        _,roi = cv2.threshold(roi, 120,255, cv2.THRESH_BINARY)
         cv2.imshow('ROI', roi)
         cv2.resizeWindow('ROI', 300, 300) 
         cv2.waitKey(25)
